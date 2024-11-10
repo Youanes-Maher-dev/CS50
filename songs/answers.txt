@@ -1,0 +1,18 @@
+Energy
+Average energy of music is 0.659
+
+Valence
+Average Valence of music is 0.484
+The user listen to both habby and bad music.
+
+danceability
+Average danceability of music is 0.716
+
+Conclusion: The user is from the blue mode
+
+
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+Give us more data.
+
+

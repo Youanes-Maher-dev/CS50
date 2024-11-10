@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function checkAnswer(button){
+                var answer = button.getAttribute('data-answer');
+                var response = document.getElementById('response');
+
+                if (answer == 'correct'){
+                    button.style.backgroundColor = 'green';
+                    response.innerHTML = 'correct!'
+                    response.style.color = 'green';
+                }
+                else{
+                    button.style.backgroundColor = 'red';
+                    response.innerHTML = 'Incorrect';
+                    response.style.color = 'red';
+                }
+            }
+
+            function checkTextAnswer(){
+                var input = document.getElementById('text-answer');
+                var response = document.getElementById('text-response');
+                var answer = input.value;
+
+                if (answer == '42'){
+                    button.style.backgroundColor = 'green';
+                    response.innerHTML = 'correct!'
+                    response.style.color = 'green';
+                }
+                else{
+                    button.style.backgroundColor = 'red';
+                    response.innerHTML = 'Incorrect';
+                    response.style.color = 'red';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Who may have said, "I think there is a world market for maybe five computers"??</h3>
+                <button data-answer "incorrect" onclick="checkAnswer(this)">Internet advocate and former Vice President Al Gore</button>
+                <button data-answer-"incorrect" onclick="checkAnswer(this)">Microsoft Chairman Bill Gates</button>
+                <button data-answer-"correct" onclick="checkAnswer(this)">IBM Chairman Thomas Watson</button>
+                <button data-answer "incorrect" onclick="checkAnswer(this)">Hewlett Packard Co-Founder David Packard</button>
+                <div id="response"></div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What is the answer to the ultimate question of life, the universe, and everything?</h3>
+                <input type="text" id="text-answer">
+                <button onclick="checkTextAnswer()">Confirm Answer</button>
+                <div id="text-response"></div>
+            </div>
+        </div>
+    </body>
+</html>
